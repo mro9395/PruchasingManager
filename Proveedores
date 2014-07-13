@@ -1,0 +1,20 @@
+Private Sub CommandButton3_Click()
+
+CrearProveedores.Show
+End Sub
+
+Private Sub CommandButton4_Click()
+Unload Proveedor
+End Sub
+
+Private Sub CommandButton5_Click()
+
+VerProveedores.Show
+
+End Sub
+
+Private Sub CommandButton6_Click()
+
+EliminarProveedores.Show
+
+End Sub
