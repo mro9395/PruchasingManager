@@ -1,0 +1,55 @@
+Dim fila As Integer
+Dim valorbuscado As Integer
+Private Sub combobox1_change()
+
+fila = 2
+valorbuscado = 0
+Do
+    If Worksheets("Solicitud").Cells(fila, 1) = ComboBox1.Text Then
+    valorbuscado = fila
+    End If
+    fila = fila + 1
+Loop Until Worksheets("Solicitud").Cells(fila, 1) = Empty
+If valorbuscado <> 0 Then
+ 
+    TextBox1.Text = Worksheets("Solicitud").Cells(valorbuscado, 2)
+    TextBox2.Text = Worksheets("Solicitud").Cells(valorbuscado, 2)
+    TextBox3.Text = Worksheets("Solicitud").Cells(valorbuscado, 3)
+    TextBox4.Text = Worksheets("Solicitud").Cells(valorbuscado, 4)
+
+Else
+   TextBox1.Text = ""
+   TextBox2.Text = ""
+   TextBox3.Text = ""
+   TextBox4.Text = ""
+   
+End If
+
+ 
+End Sub
+
+Private Sub commandbutton1_Click()
+'If usuari = admi And contr = contra2 Then
+Unload Estado
+'UserForm4.Show
+'End If
+
+'If usuari = usernameus And contr = contra1 Then
+
+'UserForm1.Show
+'End If
+
+End Sub
+
+Private Sub Userform_Activate()
+fila = 2
+While Sheets("Solicitud").Cells(fila, 1) <> Empty
+fila = fila + 1
+Wend
+j = fila - 1
+For i = 2 To j
+ComboBox1.AddItem (Sheets("Solicitud").Cells(i, 1))
+
+Next i
+
+End Sub

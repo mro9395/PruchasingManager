@@ -1,0 +1,19 @@
+Private Sub CommandButton3_Click()
+GenerarPedido.Show
+End Sub
+
+Private Sub CommandButton4_Click()
+Unload Menu
+End Sub
+
+Private Sub CommandButton5_Click()
+Estado.Show
+End Sub
+
+Private Sub CommandButton6_Click()
+Eliminarpedido.Show
+End Sub
+
+Private Sub CommandButton7_Click()
+Proveedor.Show
+End Sub
